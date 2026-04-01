@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Filament\Resources\DemoOrderResource\Pages;
+
+use App\Filament\Resources\DemoOrderResource;
+use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
+
+class ListDemoOrders extends ListRecords
+{
+    protected static string $resource = DemoOrderResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            CreateAction::make(),
+        ];
+    }
+}
